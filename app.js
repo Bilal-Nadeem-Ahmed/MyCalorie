@@ -20,12 +20,28 @@ const ItemCtrl = (function(){
     totalCalories: 0
 
   }
+  return{
+    logData: function(){
+      return data;
+    }
+  }
 })();
 // ui controller
 const UICtrl = (function(){
+  // return public methods
+  return {
+    
+  }
   
 })();
 // app controller
 const AppCtrl = (function(ItemCtrl, UICtrl){
-  
+  // public methods
+  return {
+    init: function(){
+      console.log("initialising app...")
+    }
+  }
 })(ItemCtrl, UICtrl);
+
+AppCtrl.init()
